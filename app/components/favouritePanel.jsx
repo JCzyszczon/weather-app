@@ -219,7 +219,7 @@ export default function FavouritePanel() {
                 ) : (
                     <section className='w-full h-full md:min-h-0 min-h-[70vh] md:p-5 px-1 py-6 justify-center items-center flex flex-col text-[#9399a2] gap-4'>
                         <FaCircleInfo className='text-3xl'/>
-                        <h1 className="md:text-base text-sm text-center">You haven't added any cities to your list yet.<br/> To do this, you can click the heart icon in the main panel.</h1>
+                        <h1 className="md:text-base text-sm text-center">You haven&apos;t added any cities to your list yet.<br/> To do this, you can click the heart icon in the main panel.</h1>
                         <Link href={"/"} className="bn632-hover bn26 !px-10 !py-2 !text-sm">Search now</Link>
                     </section>
                 )}

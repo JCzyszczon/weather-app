@@ -329,7 +329,7 @@ export default function MainPanel({ city }) {
             </div>
           </section>
           <section className='w-full h-auto bg-[#eaecef] dark:bg-[#303134] rounded-2xl sm:p-5 p-4'>
-            <h2 className='text-sm font-[900] text-[#9399a2] uppercase'>Today's forecast</h2>
+            <h2 className='text-sm font-[900] text-[#9399a2] uppercase'>Today&apos;s forecast</h2>
             <div className='w-full flex justify-center items-center'>
               <Swiper slidesPerView={'auto'} spaceBetween={0} initialSlide={0} className='!w-auto !flex !justify-center !items-center !py-4 !gap-1'>
                 {weatherData ? (

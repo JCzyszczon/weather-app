@@ -69,7 +69,7 @@ function DetailsComponent({ data, units }) {
             <Icon name={data.list[0].weather[0].main} timezone={data.city.timezone} dt_txt={data.list[0].dt_txt} className='lg:max-h-[115px] max-h-[80px] w-auto'/>
         </section>
         <section className="w-full flex flex-col justify-between items-center gap-2 border-b-2 dark:border-b-[#414143] pt-2 pb-6">
-            <h3 className='text-sm font-[900] text-[#9399a2] uppercase text-start w-full'>Today's forecast</h3>
+            <h3 className='text-sm font-[900] text-[#9399a2] uppercase text-start w-full'>Today&apos;s forecast</h3>
             <div className='w-full flex justify-center items-center'>
             <Swiper slidesPerView={'auto'} spaceBetween={0} initialSlide={0} className='!w-auto !flex !justify-center !items-center !py-4 !gap-1 !bg-[#eaecef] dark:!bg-[#222222] !rounded-2xl'>
                 {data.list.slice(0,5).map((forecast, index) => (

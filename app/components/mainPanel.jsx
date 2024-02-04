@@ -5,7 +5,7 @@ import {IoWater} from 'react-icons/io5';
 import { BsFillPatchCheckFill, BsSpeedometer } from 'react-icons/bs';
 import {AiFillCloseCircle, AiFillDelete, AiFillHeart, AiOutlineHeart} from 'react-icons/ai';
 import { getWeatherData } from '../api/openWeather';
-import Icon from './icon';
+import IconComp from "./iconComp";
 import { format } from 'date-fns';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -318,7 +318,7 @@ export default function MainPanel({ city }) {
               </div>
             </div>
             <div className='w-full h-auto flex sm:justify-end justify-center items-center py-2'>
-              {weatherData ? <Icon name={weatherData.list[0].weather[0].main} timezone={weatherData.city.timezone} dt_txt={weatherData.list[0].dt_txt} className='lg:max-h-[175px] max-h-[140px] w-auto'/> : <div className='lg:w-[180px] w-[120px] aspect-square rounded-2xl bg-gray-300 dark:bg-[#525356] animate-pulse lg:mt-0 mt-2'></div> }
+              {weatherData ? <IconComp name={weatherData.list[0].weather[0].main} timezone={weatherData.city.timezone} dt_txt={weatherData.list[0].dt_txt} className='lg:max-h-[175px] max-h-[140px] w-auto'/> : <div className='lg:w-[180px] w-[120px] aspect-square rounded-2xl bg-gray-300 dark:bg-[#525356] animate-pulse lg:mt-0 mt-2'></div> }
             </div>
             <div onClick={handleFavouriteClick} className='w-[40px] cursor-pointer h-auto absolute right-2 top-2 bg-[#eaecef] dark:bg-[#303134] group hover:scale-95 duration-200 drop-shadow-md aspect-square rounded-full flex justify-center items-center'>
               {isFavourite ? (
@@ -338,7 +338,7 @@ export default function MainPanel({ city }) {
                     <SwiperSlide key={index} className='!w-auto !flex !flex-col !justify-between !items-center !gap-3 !border-r-2 dark:border-r-[#414143] last:!border-none !px-5'>
                       <motion.div variants={swiperItem} initial='hidden' whileInView='show' transition={{ duration: 0.5, delay: index * 0.15 }} viewport={{ once: true, amount: 0.5 }} className='flex flex-col justify-between items-center gap-3'>
                         <h3 className='text-[#9399a2] sm:text-sm text-xs font-[900]'>{formatLocalDate(data.dt_txt, weatherData.city.timezone, false)}</h3>
-                        <Icon name={data.weather[0].main} timezone={weatherData.city.timezone} dt_txt={data.dt_txt} className='w-auto max-h-[70px] aspect-square object-contain'/>
+                        <IconComp name={data.weather[0].main} timezone={weatherData.city.timezone} dt_txt={data.dt_txt} className='w-auto max-h-[70px] aspect-square object-contain'/>
                         <p className='lg:text-3xl text-2xl font-[900]'>{calculateTemp(data.main.temp, false)}°</p>
                       </motion.div>
                     </SwiperSlide>
@@ -403,7 +403,7 @@ export default function MainPanel({ city }) {
               <motion.li key={index + data.dt} variants={swiperItem2} initial='hidden' whileInView='show' transition={{ duration: 0.5, delay: index * 0.15 }} viewport={{ once: true, amount: 0.5 }} className='w-full flex justify-between items-center border-b-2 dark:border-b-[#414143] last:border-none lg:px-[5%] px-[2%] pb-4'>
                 <h3 className='w-full text-[#9399a2] text-base'>{formatLocalDate(data.dt_txt, weatherData.city.timezone, true)}</h3>
                 <div className='w-full flex justify-start items-center lg:gap-3 gap-1'>
-                  <Icon name={data.weather[0].main} timezone={weatherData.city.timezone} dt_txt={data.dt_txt} className='w-auto lg:max-h-[68px] max-h-[50px] aspect-square object-contain'/>
+                  <IconComp name={data.weather[0].main} timezone={weatherData.city.timezone} dt_txt={data.dt_txt} className='w-auto lg:max-h-[68px] max-h-[50px] aspect-square object-contain'/>
                   <p className='font-[900]'>{data.weather[0].main}</p>
                 </div>
                 <p className='w-full text-end text-lg font-[900]'>{calculateTemp(data.main.temp, false)}°</p>

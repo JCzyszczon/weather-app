@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { FaCircleInfo } from 'react-icons/fa6';
 import { MdDragIndicator, MdEdit, MdClose, MdDelete } from 'react-icons/md'
 import { getWeatherData } from '../api/openWeather';
-import Icon from './icon';
+import IconComp from "./iconComp";
 import { format } from 'date-fns';
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -195,7 +195,7 @@ export default function FavouritePanel() {
                                                         <MdDragIndicator/>
                                                     </span>
                                                 )}
-                                                <Icon name={data.list[0].weather[0].main} timezone={data.city.timezone} dt_txt={data.list[0].dt_txt} className='w-auto lg:max-h-[60px] max-h-[50px] aspect-square object-contain'/>
+                                                <IconComp name={data.list[0].weather[0].main} timezone={data.city.timezone} dt_txt={data.list[0].dt_txt} className='w-auto lg:max-h-[60px] max-h-[50px] aspect-square object-contain'/>
                                                 <section className="w-full flex flex-col justify-between items-start gap-2">
                                                     <h2 className="md:text-2xl text-xl font-[900]">{data.city.name}</h2>
                                                     <p className="md:text-base text-sm text-[#9399a2]">{formatLocalDate(data.list[0].dt_txt, data.city.timezone, false)}</p>

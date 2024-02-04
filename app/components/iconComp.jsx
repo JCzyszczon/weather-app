@@ -1,6 +1,6 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
-
 import Clear from '../img/sun/26.png';
 import Clear2 from '../img/moon/9.png';
 import Clouds from '../img/sun/27.png';
@@ -72,7 +72,7 @@ const iconsNight = {
     Pressure: Pressure2,
 }
 
-function Icon({ name, timezone, dt_txt, ...props }) {
+function IconComp({ name, timezone, dt_txt, ...props }) {
     const timezoneOffset = timezone || 0;
     const timestamp = Date.parse(dt_txt);
     const localTimestamp = timestamp + timezoneOffset * 1000;
@@ -82,12 +82,16 @@ function Icon({ name, timezone, dt_txt, ...props }) {
     const isDaytime = hours >= 6 && hours < 20;
     const iconSet = isDaytime ? iconsDay : iconsNight;
     const icon = iconSet[name];
-  
-    if (!icon) {
-        return <Image src={Clear} alt='Basic Icon' {...props} loading='eager' title='Basic Icon'/>;
-    } else {
-        return <Image src={icon} alt={name} {...props} loading='eager' title={name}/>;
-    }
+
+    return (
+        <>
+        {!icon ? (
+            <Image src={Clear} alt='Basic Icon' loading='eager' title='Basic Icon'/>
+        ) : (
+            <Image src={icon} alt={name} {...props} loading='eager' title={name}/>
+        )}
+        </>
+    )
 }
-  
-export default Icon;
+
+export default IconComp;

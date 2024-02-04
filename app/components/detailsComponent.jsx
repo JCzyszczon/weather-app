@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import Icon from './icon';
+import IconComp from './iconComp';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { format } from 'date-fns';
@@ -66,7 +66,7 @@ function DetailsComponent({ data, units }) {
                 </section>
                 <motion.p variants={item} initial='hidden' whileInView='show' viewport={{ once: true, amount: 0.5 }} className='lg:text-6xl sm:text-4xl text-5xl font-[900]'>{calculateTemp(data.list[0].main.temp, false)}°</motion.p>
             </section>
-            <Icon name={data.list[0].weather[0].main} timezone={data.city.timezone} dt_txt={data.list[0].dt_txt} className='lg:max-h-[115px] max-h-[80px] w-auto'/>
+            <IconComp name={data.list[0].weather[0].main} timezone={data.city.timezone} dt_txt={data.list[0].dt_txt} className='lg:max-h-[115px] max-h-[80px] w-auto'/>
         </section>
         <section className="w-full flex flex-col justify-between items-center gap-2 border-b-2 dark:border-b-[#414143] pt-2 pb-6">
             <h3 className='text-sm font-[900] text-[#9399a2] uppercase text-start w-full'>Today&apos;s forecast</h3>
@@ -76,7 +76,7 @@ function DetailsComponent({ data, units }) {
                     <SwiperSlide key={index} className='!w-auto !flex !flex-col !justify-between !items-center !gap-3 !border-r-2 dark:border-r-[#414143] last:!border-none !px-5'>
                     <motion.div variants={swiperItem} initial='hidden' whileInView='show' transition={{ duration: 0.5, delay: index * 0.15 }} viewport={{ once: true, amount: 0.5 }} className='flex flex-col justify-between items-center gap-3'>
                         <h3 className='text-[#9399a2] sm:text-sm text-xs font-[900]'>{formatLocalDate(forecast.dt_txt, data.city.timezone, false)}</h3>
-                        <Icon name={forecast.weather[0].main} timezone={data.city.timezone} dt_txt={forecast.dt_txt} className='w-auto max-h-[70px] aspect-square object-contain'/>
+                        <IconComp name={forecast.weather[0].main} timezone={data.city.timezone} dt_txt={forecast.dt_txt} className='w-auto max-h-[70px] aspect-square object-contain'/>
                         <p className='lg:text-3xl text-2xl font-[900]'>{calculateTemp(forecast.main.temp, false)}°</p>
                     </motion.div>
                     </SwiperSlide>
@@ -90,7 +90,7 @@ function DetailsComponent({ data, units }) {
             <motion.li key={index + forecast.dt} variants={swiperItem2} initial='hidden' whileInView='show' transition={{ duration: 0.5, delay: index * 0.15 }} viewport={{ once: true, amount: 0.5 }} className='w-full flex justify-between items-center border-b-2 dark:border-b-[#414143] last:border-none lg:px-[5%] px-[2%] pb-4'>
                 <h3 className='w-full text-[#9399a2] text-base'>{formatLocalDate(forecast.dt_txt, data.city.timezone, true)}</h3>
                 <div className='w-full flex justify-start items-center lg:gap-3 gap-1'>
-                <Icon name={forecast.weather[0].main} timezone={data.city.timezone} dt_txt={forecast.dt_txt} className='w-auto lg:max-h-[68px] max-h-[50px] aspect-square object-contain'/>
+                <IconComp name={forecast.weather[0].main} timezone={data.city.timezone} dt_txt={forecast.dt_txt} className='w-auto lg:max-h-[68px] max-h-[50px] aspect-square object-contain'/>
                 <p className='font-[900]'>{forecast.weather[0].main}</p>
                 </div>
                 <p className='w-full text-end text-lg font-[900]'>{calculateTemp(forecast.main.temp, false)}°</p>

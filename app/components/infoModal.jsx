@@ -44,17 +44,13 @@ function InfoModal({ closeModal }) {
         <button onClick={handleClose} className='absolute right-2 top-2 z-[100]'><IoMdClose className='text-3xl text-[#9399a2] hover:text-[#828891]'/></button>
         <h2 className='text-[#9399a2] sm:text-sm text-xs font-[900] uppercase text-start'>Info & credits</h2>
         <div className='flex flex-col justify-center items-start gap-3'>
-            {/*<p>This app was created to check the weather of your chosen location around the world. To do this, enter the name of the selected city in the field and click the search icon.</p>
-            <p>Thanks to the data collected by the <a href='https://openweathermap.org/forecast5' target='_blank' className='text-[#0095ff] hover:text-[#0084ee] underline'>OpenWeather API</a>, you can check the weather several hours or even several days in advance. Additionally, it provides a whole set of information regarding rainfall chances, etc.</p>
-  <p>You can find the source code for this application on the following sources:</p>*/}
-            <p>WeatherApp was created in order to deliver basic weather information at any location on the globe. Additionally, website displays weather forecast for the next hours and several days.</p>
-            {/*<p>While using the app, users can add selected cities to their favourites. After going to the <Link className='text-[#0095ff] hover:text-[#0084ee] underline' href={'/favourite'}>cities section</Link>, they will be displayed with quick access to information.</p>*/}
-            <p>In the <Link className='text-[#0095ff] hover:text-[#0084ee] underline' href={'/settings'}>settings section</Link> users can adjust their preferred units and the appearance of the page.</p>
-            <p>Application uses <a href='https://openweathermap.org/forecast5' target='_blank' className='text-[#0095ff] hover:text-[#0084ee] underline'>OpenWeather API</a>.</p>
+          <p>WeatherApp was created in order to deliver basic weather information at any location on the globe. Additionally, website displays weather forecast for the next hours and several days.</p>
+          <p>In the <Link className='text-[#0095ff] hover:text-[#0084ee] underline' href={'/settings'}>settings section</Link> users can adjust their preferred units and the appearance of the page.</p>
+          <p>Application uses <a href='https://openweathermap.org/forecast5' target='_blank' className='text-[#0095ff] hover:text-[#0084ee] underline'>OpenWeather API</a>.</p>
         </div>
         <div className='w-full flex justify-center items-center gap-5'>
-            <a href='https://github.com/JCzyszczon' target='_blank'><FaGithub className='text-3xl  hover:text-[#0095ff] duration-200'/></a>
-            <a href='https://jczyszczon.pl' target='_blank'><AiOutlineGlobal className='text-3xl  hover:text-[#0095ff] duration-200'/></a>
+          <a href='https://github.com/JCzyszczon' target='_blank'><FaGithub className='text-3xl  hover:text-[#0095ff] duration-200'/></a>
+          <a href='https://jczyszczon.pl' target='_blank'><AiOutlineGlobal className='text-3xl  hover:text-[#0095ff] duration-200'/></a>
         </div>
       </motion.section>
     </section>

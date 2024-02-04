@@ -16,7 +16,7 @@ export const metadata = {
   creator: 'Jakub Czyszczoń',
   keywords: ['Weather', 'Weather App', 'WeatherApp', 'Weahter Poland', 'Poland', 'Check weather'],
   alternates: {
-    canonical: 'https://www.jczyszczon.pl',
+    canonical: 'https://weather.jczyszczon.pl',
   },
   themeColor: '#222222',
 }

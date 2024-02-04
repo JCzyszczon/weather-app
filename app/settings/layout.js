@@ -1,7 +1,7 @@
 export const metadata = {
     title: 'Settings - WeatherApp',
     alternates: {
-      canonical: 'https://www.jczyszczon.pl/settings',
+      canonical: 'https://weather.jczyszczon.pl/settings',
     },
 }
 

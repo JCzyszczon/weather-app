@@ -4,7 +4,7 @@ import FavouritePanel from "../components/favouritePanel";
 export const metadata = {
   title: 'Favourite - WeatherApp',
   alternates: {
-    canonical: 'https://www.jczyszczon.pl/favourite',
+    canonical: 'https://weather.jczyszczon.pl/favourite',
   },
 }
 

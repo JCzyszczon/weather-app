@@ -6,7 +6,10 @@ export async function generateMetadata({ params }) {
   const decodedCityName = params.city ? decodeURIComponent(params.city) : '';
 
   return {
-    title: `${decodedCityName} - WeatherApp`
+    title: `${decodedCityName} - WeatherApp`,
+    alternates: {
+      canonical: `https://weather.jczyszczon.pl/search/${decodedCityName}`,
+    },
   }
 }
 

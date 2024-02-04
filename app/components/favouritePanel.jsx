@@ -158,7 +158,7 @@ export default function FavouritePanel() {
     }
 
     const handleSelection = (index, data) => {
-        if(isMobile) {
+        if(isMobile && !isEditing) {
             setSelectedCity(index)
             setWeatherSendingData(data);
             setIsWeatherModalOpen(true);

@@ -133,7 +133,11 @@ export default function FavouritePanel() {
             setFavObj(null);
             setSelectedCity(null);
         } else {
-            setSelectedCity(index - 1);
+            if(selectedCity == 0) {
+                setSelectedCity(0);
+            } else {
+                setSelectedCity(index - 1);
+            }
         }
         setIsModalOpen(false);
     };

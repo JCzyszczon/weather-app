@@ -73,7 +73,7 @@ const iconsNight = {
     Pressure: Pressure2,
 }
 
-const Icon = ({ name, timezone, dt_txt, ...props }) => {
+function Icon({ name, timezone, dt_txt, ...props }) {
     const timezoneOffset = timezone || 0;
     const timestamp = Date.parse(dt_txt);
     const localTimestamp = timestamp + timezoneOffset * 1000;
@@ -89,6 +89,6 @@ const Icon = ({ name, timezone, dt_txt, ...props }) => {
     } else {
         return <Image src={icon} alt={name} {...props} loading='eager' title={name}/>;
     }
-};
+}
   
 export default Icon;

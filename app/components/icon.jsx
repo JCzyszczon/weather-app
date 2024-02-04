@@ -85,7 +85,7 @@ const Icon = ({ name, timezone, dt_txt, ...props }) => {
   
     if (!icon) {
       console.warn(`Nie znaleziono ikony o nazwie "${name}"`);
-      return null;
+      return <Image src={iconsDay[Clear]} alt='Basic Icon' {...props} loading='eager' title='Basic Icon'/>;
     }
   
     return <Image src={icon} alt={name} {...props} loading='eager' title={name}/>;

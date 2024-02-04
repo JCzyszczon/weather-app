@@ -84,11 +84,10 @@ const Icon = ({ name, timezone, dt_txt, ...props }) => {
     const icon = iconSet[name];
   
     if (!icon) {
-      console.warn(`Nie znaleziono ikony o nazwie "${name}"`);
-      return <Image src={Clear} alt='Basic Icon' {...props} loading='eager' title='Basic Icon'/>;
+        return <Image src={Clear} alt='Basic Icon' {...props} loading='eager' title='Basic Icon'/>;
+    } else {
+        return <Image src={icon} alt={name} {...props} loading='eager' title={name}/>;
     }
-  
-    return <Image src={icon} alt={name} {...props} loading='eager' title={name}/>;
 };
   
 export default Icon;

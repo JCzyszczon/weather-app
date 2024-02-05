@@ -18,7 +18,7 @@ export const metadata = {
   alternates: {
     canonical: 'https://weather.jczyszczon.pl',
   },
-  themeColor: '#222222',
+  themeColor: '#0095ff',
 }
 
 export default function RootLayout({ children }) {

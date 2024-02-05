@@ -2,7 +2,7 @@
 
 ![Banner WeatherApp](/app/img/screens/w-logo-transparent.png)
 
-# WeatherApp Project
+# WeatherApp
 
 [Live Page][live-page] . [Fallback Page][fallback-page]
 

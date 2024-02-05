@@ -105,7 +105,7 @@ This is what the Light Mode version looks like.
 <table>
     <tr>
         <td>
-            <img src="./app/img/screens/landing-page-desktop.png" alt="Desktop solution" width="100%" title="Desktop solution"/>
+            <img src="./app/img/screens/light-mode-desktop.png" alt="Desktop solution" width="100%" title="Desktop solution"/>
         </td>
         <td>
             <img src="./app/img/screens/light-mode-mobile.png" alt="Mobile solution" title="Mobile solution" width="100%" />

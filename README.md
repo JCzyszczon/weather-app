@@ -1,6 +1,6 @@
-![Banner WeatherApp](/app/img/screens/w-logo-transparent.png)
-
 <div align="center">
+
+![Banner WeatherApp](/app/img/screens/w-logo-transparent.png)
 
 # WeatherApp Project
 

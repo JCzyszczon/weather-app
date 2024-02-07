@@ -72,6 +72,17 @@ export default function FavouritePanel() {
           document.body.style.overflow = "auto";
         };
     }, [isModalOpen]);
+
+    useEffect(() => {
+        if (isWeatherModalOpen) {
+          document.body.style.overflow = "hidden";
+        } else {
+          document.body.style.overflow = "auto";
+        }
+        return () => {
+          document.body.style.overflow = "auto";
+        };
+    }, [isWeatherModalOpen]);
   
     const getFavoritesFromLocalStorage = () => {
         const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
